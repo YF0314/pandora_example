@@ -2,6 +2,7 @@
 
 #このコードは一部syncer.jpからのコードを引用しています。
 
+if($_GET['token'] == 'canceled'){echo 'お前キャンセルしたな';exit();}
 
 $request_url = 'https://api.pandora.xere.jp/oauth/resorce/'.$_GET['token'] ;
 echo $request_url;
@@ -11,7 +12,6 @@ $context = array(
 		'method' => 'GET' , // リクエストメソッド
 	) ,
 ) ;
-
 
 
 $curl = curl_init() ;
